@@ -16,7 +16,15 @@ class ClockApiStack(cdk.Stack):
             bucket_name="client-application-bucket-for-ryan-38058130483"
         )
         
-        bucket_deployment = BucketDeployment(self, "index",
+        bucket_deployment = BucketDeployment(self, "file",
             sources=[Source.asset('front_end')],
             destination_bucket=bucket
+        )
+
+        web_service_lambda = lambda(self, "web_service"
+            # lambda stuff
+        )
+
+        client_lambda = lambda(self, "client"
+            # lambda stuff
         )
