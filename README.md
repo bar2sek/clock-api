@@ -14,12 +14,23 @@ Brian P. Hogan. Exercises for Programmers, P1.0 The Pragmatic Bookshelf, LLC.
 
 ### _Web Service:_
 
-AWS Lambda that returns a single key value pair in JSON format labeled "currentTime" with the time of day in Central Standard Time in the United States.
+- AWS Lambda running Python
+    - get current time
+    - convert time to Central Standard Time in the United States
+    - return a single key value pair in JSON format
 
 ### _Client Application:_
 
-Python script run locally to hit the time API Lambda endpoint created above, this converts the returned JSON to a nice human readable date and time in the console output complete with unit tests to ensure functions operate as intended.
+- AWS S3 Bucket
+    - publicly host an index.html file with a single button that says "Get Time"
+- AWS Lambda running Python
+    - triggered by "Get Time" button
+    - hit endpoint of the clock Lambda created above
+    - convert the returned JSON to human readable string
+    - return string to html for display to the user
 
 ### _CI/CD:_
 
-GitHub Actions will run the tests for the client application as well as deploy the Lambda function via an AWS CDK stack.
+- GitHub Actions
+    - run tests for both client and web service python applications
+    - deploy all AWS services using CDK stack
