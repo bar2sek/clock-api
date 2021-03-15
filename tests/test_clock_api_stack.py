@@ -16,4 +16,4 @@ def test_bucket_created():
 
 
 def test_lambda_created():
-    assert("AWS::Lambda::Lambda" in get_template()) # I don't know :p
+    assert("AWS::Lambda::Function" in get_template())
