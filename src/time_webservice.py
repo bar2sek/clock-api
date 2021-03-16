@@ -11,14 +11,14 @@ url = 'blah' # from AWS when gets built
 
 # Do time stuff here
 def get_time():
-    time = datetime.now(timezone('US/Central'))
+    # time = datetime.now(timezone('US/Central'))
     time_of_day = 0
     return time_of_day
 
 
 def convert_time(time_of_day):
     # Make time into a single json key value pair
-    json_time = { "currentTime": "2050-01-24 15:06:26" }
+    json_time = 0 # { "currentTime": "2050-01-24 15:06:26" }
     return json_time
 
 
