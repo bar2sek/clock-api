@@ -23,6 +23,7 @@ def convert_time(time_of_day):
 
 @app.route('/')
 def main_route():
+    json_time = 0
     return json_time
 
 
