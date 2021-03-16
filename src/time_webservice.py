@@ -1,31 +1,28 @@
-from flask import Flask, request
+from flask import Flask
 import json
-import requests
-import time
 from datetime import datetime
 
 
 app = Flask(__name__)
-url = 'blah' # from AWS when gets built
+now = datetime.now()
 
 
-# Do time stuff here
 def get_time():
-    # time = datetime.now(timezone('US/Central'))
-    time_of_day = 0
-    return time_of_day
+    time_string = now.strftime("%d-%m-%Y %H:%M:%S")
+    return time_string
 
 
-def convert_time(time_of_day):
-    something = 0
-    return something
+def time_to_json(time_string):
+    Dictionary = {"currentTime": time_string}
+    formatted_time = json.dumps(Dictionary)
+    json_time = json.loads(formatted_time)
+    return json_time
 
 
 @app.route('/')
 def main_route():
-    json_time = 0
-    return json_time
+    return time_to_json(get_time())
 
 
 if __name__ == '__main__':
-    app.run() # need anything in the run method?
+    app.run(debug=True)

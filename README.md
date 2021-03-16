@@ -15,8 +15,7 @@ Brian P. Hogan. Exercises for Programmers, P1.0 The Pragmatic Bookshelf, LLC.
 ### _Web Service:_
 
 - AWS Lambda running Python
-    - get current time
-    - convert time to Central Standard Time in the United States
+    - get current local time
     - return a single key value pair in JSON format
 
 ### _Client Application:_

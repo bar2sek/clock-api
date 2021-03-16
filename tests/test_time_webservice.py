@@ -1,29 +1,19 @@
 import pytest
-# import time_webservice
+import src.time_webservice as webservice
 import json
-# import time
+from datetime import datetime
 
 
-def test_is_able_to_get_time_from_service():
-    expected_return_code = "200"
-    # Call the function with given parameters 
-    actual_return_code = "200" # r.status_code
-    assert actual_return_code == expected_return_code
+def test_webservice_is_able_to_get_current_time():
+    now = datetime.now()
+    expected_time_now = now.strftime("%d-%m-%Y %H:%M:%S")
+    actual_time_now = webservice.get_time()
+    assert actual_time_now == expected_time_now
 
 
-def test_format_of_incoming_time():
-    expected_result = 1
-    actual_result = 1
-    assert expected_result == actual_result
-
-
-def test_change_time_to_central_time():
-    expected_result = 1
-    actual_result = 1
-    assert expected_result == actual_result
-
-
-def test_convert_central_time_to_proper_json_pair():
-    expected_result = 1
-    actual_result = 1
+def test_convert_string_time_to_json():
+    time = "16-03-2021 15:29:21"
+    json_time = json.dumps({ "currentTime": "16-03-2021 15:29:21" })
+    expected_result = json.loads(json_time)
+    actual_result = webservice.time_to_json(time)
     assert expected_result == actual_result

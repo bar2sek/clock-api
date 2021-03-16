@@ -27,3 +27,5 @@ class ClockApiStack(cdk.Stack):
         #     handler="index.main",
         #     runtime=lambda_.Runtime.PYTHON_3_6
         # )
+
+        # core.CfnOutput(self, "")
