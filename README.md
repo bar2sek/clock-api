@@ -21,13 +21,10 @@ Brian P. Hogan. Exercises for Programmers, P1.0 The Pragmatic Bookshelf, LLC.
 
 ### _Client Application:_
 
-- AWS S3 Bucket
-    - publicly host an index.html file with a single button that says "Get Time"
-- AWS Lambda running Python
-    - triggered by "Get Time" button
+- Python script run by the GitHub Action pipeline
     - hit endpoint of the clock Lambda created above
     - convert the returned JSON to human readable string
-    - return string to html for display to the user
+    - return string for display to the user
 
 ### _CI/CD:_
 
