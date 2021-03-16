@@ -1,7 +1,7 @@
 import pytest
+from flask import Flask
 import src.time_webservice as webservice
 import json
-from flask import Flask
 from datetime import datetime
 
 
