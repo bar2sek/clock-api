@@ -17,11 +17,8 @@ def get_time():
 
 
 def convert_time(time_of_day):
-
-
-@app.errorhandler(404)
-def page_not_found(e):
-    return ("something went wrong...", 404, None)
+    something = 0
+    return something
 
 
 @app.route('/')
