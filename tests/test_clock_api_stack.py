@@ -11,9 +11,9 @@ def get_template():
     return json.dumps(app.synth().get_stack("clock-api").template)
 
 
-def test_bucket_created():
-    assert("AWS::S3::Bucket" in get_template())
+# def test_bucket_created():
+#     assert("AWS::S3::Bucket" in get_template())
 
 
-def test_lambda_created():
-    assert("AWS::Lambda::Function" in get_template())
+# def test_lambda_created():
+#     assert("AWS::Lambda::Function" in get_template())
