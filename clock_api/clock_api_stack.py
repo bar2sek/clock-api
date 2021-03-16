@@ -1,6 +1,6 @@
 from aws_cdk import core as cdk
 import aws_cdk.aws_lambda as lambda_
-import path as path
+# import path as path
 # from aws_cdk.aws_s3 import Bucket
 # from aws_cdk.aws_s3_deployment import BucketDeployment, Source
 
