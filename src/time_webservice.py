@@ -17,9 +17,6 @@ def get_time():
 
 
 def convert_time(time_of_day):
-    # Make time into a single json key value pair
-    json_time = 0 # { "currentTime": "2050-01-24 15:06:26" }
-    return json_time
 
 
 @app.errorhandler(404)
