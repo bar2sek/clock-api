@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 app = Flask(__name__)
-now = datetime.now()
+now = datetime.now() # only gets time when server starts, ok for a lambda?
 
 
 def get_time():

@@ -23,7 +23,8 @@ setuptools.setup(
         "aws_cdk.aws_lambda==1.93.0",
         "aws_cdk.aws_s3==1.93.0",
         "aws_cdk.aws_s3_deployment==1.93.0",
-        "flask"
+        "flask",
+        "requests"
     ],
 
     python_requires=">=3.6",
