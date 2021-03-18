@@ -88,3 +88,6 @@ ipython_config.py
 
 # pyenv
 .python-version
+
+# lambda stuff
+package/
